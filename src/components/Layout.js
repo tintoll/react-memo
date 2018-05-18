@@ -18,7 +18,6 @@ Layout.Main = styled.div`
   margin-top : 2rem;
   width : 1200px;
   position : relative;
-  background : gray;
 
   transition : all .3s; /* 애니매이션 효과*/
 
