@@ -1,0 +1,33 @@
+{
+  "name": "react-memo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "immutable": "^3.8.2",
+    "open-color": "^1.6.3",
+    "react": "^16.3.2",
+    "react-click-outside": "^3.0.1",
+    "react-dom": "^16.3.2",
+    "react-icons": "^2.2.7",
+    "react-immutable-proptypes": "^2.1.0",
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.4",
+    "react-textarea-autosize": "^6.1.0",
+    "react-transition-group": "^2.3.1",
+    "redux": "^4.0.0",
+    "redux-actions": "^2.3.2",
+    "redux-pender": "^1.2.1",
+    "styled-components": "^3.2.6"
+  },
+  "scripts": {
+    "start": "cross-env NODE_PATH=src react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.5"
+  },
+  "proxy":"http://localhost:3001"
+}
