@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import oc from 'open-color';
-import { media } from 'lib/style-util';
+import { media, transitions } from 'lib/style-util';
 import Memo from './Memo';
 import ImmutablePropTypes from "react-immutable-proptypes";
 import PropTypes from "prop-types";
+import CSSTransitionGroup from "react-transition-group/CSSTransitionGroup";
 
 const Wrapper = styled.div`
   display : block;
@@ -13,6 +14,16 @@ const Wrapper = styled.div`
   ${media.mobile`
     margin-top : 0.25rem;
   `}
+
+  .memo-enter {
+      animation: ${transitions.stretchOut} .3s ease-in;
+      animation-fill-mode: forwards;
+  }
+
+  .memo-leave {
+      animation: ${transitions.shrinkIn} .15s ease-in;
+      animation-fill-mode: forwards;
+  }
 `;
 
 const MemoList = ({memos, onOpen}) => {
@@ -28,7 +39,13 @@ const MemoList = ({memos, onOpen}) => {
 
   return (
     <Wrapper>
+      <CSSTransitionGroup
+        transitionName="memo"
+        transitionEnterTimeout={300}
+        transitionLeaveTimeout={150}
+      >
       {memoList}
+      </CSSTransitionGroup>
     </Wrapper>
   )
 
