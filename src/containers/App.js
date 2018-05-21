@@ -3,6 +3,7 @@ import Header from "components/Header";
 import Layout from "components/Layout";
 import WriteMemo from "./WriteMemo";
 import MemoListContainer from "./MemoListContainer";
+import MemoViewerContainer from "./MemoViewerContainer";
 
 import { connect  } from "react-redux";
 import * as memoActions from 'modules/memo';
@@ -41,6 +42,7 @@ class App extends Component {
             <WriteMemo />
             <MemoListContainer />
           </Layout.Main>
+          <MemoViewerContainer />
         </Layout>
       </div>
     );
