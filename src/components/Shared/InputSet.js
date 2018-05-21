@@ -43,7 +43,7 @@ class InputSet extends Component {
       <div>
         <TitleInput 
               name="title"
-              onChnage={onChange}
+              onChange={onChange}
               placeholder="제목"
               innerRef={ref => this.title = ref}
               value={title}
